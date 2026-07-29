@@ -106,3 +106,189 @@ transform:translateY(-60px);
 }
 
 }
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+background:linear-gradient(135deg,#090012,#2d0066,#6700c7,#9d00ff);
+background-size:300% 300%;
+animation:bg 10s ease infinite;
+overflow:hidden;
+}
+
+.hero{
+text-align:center;
+color:white;
+padding:40px;
+}
+
+.hero h1{
+font-size:60px;
+margin-bottom:15px;
+text-shadow:0 0 20px #b400ff;
+}
+
+.hero p{
+font-size:22px;
+opacity:.9;
+margin-bottom:35px;
+}
+
+.hero button{
+padding:15px 45px;
+font-size:18px;
+border:none;
+border-radius:50px;
+background:#b000ff;
+color:white;
+cursor:pointer;
+transition:.3s;
+box-shadow:0 0 25px #b000ff;
+}
+
+.hero button:hover{
+transform:scale(1.08);
+box-shadow:0 0 45px #d94dff;
+}
+
+@keyframes bg{
+
+0%{
+background-position:0% 50%;
+}
+
+50%{
+background-position:100% 50%;
+}
+
+100%{
+background-position:0% 50%;
+}
+
+}
+/* ===========================
+   GLASS NAVBAR
+=========================== */
+
+.navbar{
+
+position:fixed;
+
+top:20px;
+left:50%;
+
+transform:translateX(-50%);
+
+width:92%;
+max-width:1300px;
+
+padding:18px 35px;
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+
+background:rgba(255,255,255,.08);
+
+backdrop-filter:blur(20px);
+-webkit-backdrop-filter:blur(20px);
+
+border:1px solid rgba(255,255,255,.15);
+
+border-radius:18px;
+
+box-shadow:
+0 8px 30px rgba(0,0,0,.35),
+0 0 30px rgba(145,0,255,.18);
+
+z-index:999;
+
+transition:.35s;
+
+}
+
+.navbar:hover{
+
+background:rgba(255,255,255,.12);
+
+box-shadow:
+0 15px 40px rgba(0,0,0,.45),
+0 0 40px rgba(145,0,255,.35);
+
+}
+
+.logo{
+
+font-size:28px;
+
+font-weight:900;
+
+letter-spacing:2px;
+
+color:#fff;
+
+text-shadow:0 0 20px #b400ff;
+
+user-select:none;
+
+}
+
+.menu{
+
+display:flex;
+
+gap:28px;
+
+}
+
+.menu a{
+
+text-decoration:none;
+
+color:#fff;
+
+font-weight:600;
+
+transition:.3s;
+
+position:relative;
+
+}
+
+.menu a:hover{
+
+color:#d77cff;
+
+}
+
+.menu a::after{
+
+content:"";
+
+position:absolute;
+
+left:0;
+bottom:-6px;
+
+width:0;
+height:2px;
+
+background:#b400ff;
+
+transition:.3s;
+
+}
+
+.menu a:hover::after{
+
+width:100%;
+
+}
