@@ -286,6 +286,41 @@ background:#b400ff;
 transition:.3s;
 
 }
+/* ===========================
+   LOGO ANIMATION
+=========================== */
+
+.logo{
+
+animation:logoGlow 3s ease-in-out infinite;
+
+}
+
+@keyframes logoGlow{
+
+0%,100%{
+
+text-shadow:
+0 0 10px #b400ff,
+0 0 20px #b400ff,
+0 0 40px #b400ff;
+
+transform:scale(1);
+
+}
+
+50%{
+
+text-shadow:
+0 0 20px #d45dff,
+0 0 40px #d45dff,
+0 0 80px #d45dff;
+
+transform:scale(1.06);
+
+}
+
+}
 
 .menu a:hover::after{
 
