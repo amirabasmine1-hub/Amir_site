@@ -1,0 +1,108 @@
+/* ===== Reset ===== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+/* ===== Body ===== */
+
+body{
+    min-height:100vh;
+    overflow:hidden;
+    background:
+    radial-gradient(circle at 20% 20%,#b400ff 0%,transparent 30%),
+    radial-gradient(circle at 80% 70%,#7a00ff 0%,transparent 35%),
+    linear-gradient(135deg,#070010,#140022,#220044,#320066);
+
+    background-size:200% 200%;
+
+    animation:bg 12s ease infinite;
+}
+
+/* ===== Purple Glow ===== */
+
+body::before{
+    content:"";
+    position:fixed;
+
+    width:500px;
+    height:500px;
+
+    border-radius:50%;
+
+    background:#b100ff;
+
+    filter:blur(180px);
+
+    top:-180px;
+    left:-180px;
+
+    opacity:.5;
+
+    animation:float1 9s ease-in-out infinite;
+}
+
+body::after{
+    content:"";
+    position:fixed;
+
+    width:450px;
+    height:450px;
+
+    border-radius:50%;
+
+    background:#6f00ff;
+
+    filter:blur(180px);
+
+    right:-150px;
+    bottom:-150px;
+
+    opacity:.5;
+
+    animation:float2 11s ease-in-out infinite;
+}
+
+/* ===== Animations ===== */
+
+@keyframes bg{
+
+0%{
+background-position:0% 50%;
+}
+
+50%{
+background-position:100% 50%;
+}
+
+100%{
+background-position:0% 50%;
+}
+
+}
+
+@keyframes float1{
+
+0%,100%{
+transform:translateY(0);
+}
+
+50%{
+transform:translateY(50px);
+}
+
+}
+
+@keyframes float2{
+
+0%,100%{
+transform:translateY(0);
+}
+
+50%{
+transform:translateY(-60px);
+}
+
+}
