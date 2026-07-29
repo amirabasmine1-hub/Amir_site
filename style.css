@@ -574,3 +574,47 @@ position:relative;
 z-index:2;
 
 }
+/* ===========================
+   SERVICES SECTION
+=========================== */
+
+#services{
+
+min-height:100vh;
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:center;
+align-items:center;
+
+text-align:center;
+
+padding:80px 20px;
+
+color:white;
+
+}
+
+#services h2{
+
+font-size:48px;
+
+margin-bottom:20px;
+
+text-shadow:0 0 20px #b400ff;
+
+}
+
+#services p{
+
+max-width:700px;
+
+font-size:20px;
+
+opacity:.8;
+
+line-height:1.8;
+
+}
