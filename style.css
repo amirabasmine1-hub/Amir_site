@@ -453,3 +453,73 @@ background:rgba(255,255,255,.1);
 transform:translateY(-5px);
 
 }
+/* ===========================
+   HERO LIGHT EFFECT
+=========================== */
+
+.hero{
+position:relative;
+overflow:hidden;
+}
+
+.hero::before{
+
+content:"";
+
+position:absolute;
+
+width:550px;
+height:550px;
+
+border-radius:50%;
+
+background:radial-gradient(circle,#b400ff,transparent 70%);
+
+filter:blur(90px);
+
+opacity:.28;
+
+animation:heroLight 12s linear infinite;
+
+z-index:-1;
+
+}
+
+@keyframes heroLight{
+
+0%{
+
+transform:
+translate(-250px,-120px);
+
+}
+
+25%{
+
+transform:
+translate(250px,-60px);
+
+}
+
+50%{
+
+transform:
+translate(200px,150px);
+
+}
+
+75%{
+
+transform:
+translate(-180px,120px);
+
+}
+
+100%{
+
+transform:
+translate(-250px,-120px);
+
+}
+
+}
